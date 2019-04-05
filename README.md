@@ -4,6 +4,8 @@ pure python .exr header reader. reads all metadata and header data from the exr 
 Because we are parsing out the binary data directly im sure there are edge cases where this doesn't work and has only really been tested on basic metadata.
 To this end it will also include what type we think the data should be. So if you get something back that looks wonky (ie timecode) it might just mean we need to do a bit more manipulation to read it in a sensible way.
 
+If you use this project for anything please let me know, pull requests are super welcome!
+
 
 # Basic Usage
 ```

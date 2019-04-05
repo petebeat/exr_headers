@@ -87,7 +87,7 @@ class ExrHeader:
 
             data = self.convData(name, data, size)
 
-            self.header[ cn ] = { name:data }
+            self.header[ cn ] = { "type": name, "value":data }
             cn = self.readString(fd)
 
         return True
@@ -97,8 +97,11 @@ class ExrHeader:
             return self.header[name]
         return ""
 
-    def get(self):
-        return self.header
+    def get(self, key):
+        return self.header[key]
+
+    def getValue(self, key):
+        return self.header[key]['value']
 
     def __getattr__(self, name):
         return self.getAttr(name)

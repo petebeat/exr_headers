@@ -6,7 +6,7 @@ To this end it will also include what type we think the data should be. So if yo
 
 # Basic Usage
 ```
-import exr_headers as exh
+import exr_header as exh
 
 
 def read_exr(f):
